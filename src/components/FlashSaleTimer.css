@@ -1,0 +1,62 @@
+.flash-sale-timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: rgba(236, 72, 153, 0.1);
+  border: 1px solid rgba(236, 72, 153, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+}
+
+.timer-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.clock-icon {
+  animation: pulse 1.5s infinite;
+}
+
+.timer-boxes {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.timer-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-card);
+  padding: 0.15rem 0.45rem;
+  border-radius: 6px;
+  min-width: 32px;
+  box-shadow: var(--shadow-sm);
+}
+
+.timer-val {
+  font-family: var(--font-family-heading);
+  font-weight: 800;
+  font-size: 0.95rem;
+  line-height: 1;
+  color: var(--text-main);
+}
+
+.timer-unit {
+  font-size: 0.55rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+.timer-sep {
+  font-weight: 800;
+  color: var(--secondary);
+  font-size: 0.9rem;
+}

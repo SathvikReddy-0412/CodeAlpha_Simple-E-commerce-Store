@@ -1,0 +1,119 @@
+.order-tracker-root {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+}
+
+.tracker-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.status-label {
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.status-pill {
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.status-processing {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.status-shipped {
+  background: var(--warning-light);
+  color: #b45309;
+}
+
+.status-delivered {
+  background: var(--accent-light);
+  color: #047857;
+}
+
+.tracker-steps-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 2;
+  flex: 1;
+}
+
+.step-circle {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+}
+
+.step-item.completed .step-circle {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.step-item.current .step-circle {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 0 0 4px var(--primary-glow);
+  transform: scale(1.1);
+}
+
+.step-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.step-item.completed .step-title,
+.step-item.current .step-title {
+  color: var(--text-main);
+}
+
+.step-connector {
+  flex: 1;
+  height: 3px;
+  background: var(--border-color);
+  margin: 0 -0.5rem;
+  margin-bottom: 1.5rem;
+  z-index: 1;
+  transition: background-color var(--transition-normal);
+}
+
+.step-connector.filled {
+  background: var(--accent);
+}
+
+@media (max-width: 600px) {
+  .step-title {
+    display: none;
+  }
+}
